@@ -4,15 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @AllArgsConstructor
-public class Weather {
+public class ErrorResponse {
 
     @Getter @Setter
-    private double temp;
+    private int code;
     @Getter @Setter
-    private double pressure;
-    @Getter @Setter
-    private boolean umbrella;
+    private String message;
 
 }

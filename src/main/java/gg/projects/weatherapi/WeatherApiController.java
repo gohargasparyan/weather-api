@@ -1,7 +1,6 @@
 package gg.projects.weatherapi;
 
 import gg.projects.weatherapi.domain.Weather;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
