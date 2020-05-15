@@ -1,5 +1,6 @@
 package gg.projects.weatherapi;
 
+import gg.projects.weatherapi.domain.History;
 import gg.projects.weatherapi.domain.Weather;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,5 +18,10 @@ public class WeatherApiController {
     @GetMapping("/current")
     public ResponseEntity<Weather> current(@RequestParam String location) {
        return ResponseEntity.ok(openWeatherService.getCurrentWeather(location));
+    }
+
+    @GetMapping("/history")
+    public ResponseEntity<History> history(@RequestParam String location) {
+        return ResponseEntity.ok(openWeatherService.getHistoricalWeather(location));
     }
 }

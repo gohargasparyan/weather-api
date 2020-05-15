@@ -8,15 +8,19 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class OpenWeatherConfig {
 
     @Getter @Setter
-    private String url;
+    private String apiKey;
 
     @Getter @Setter
-    private String apikey;
+    private String currentUrl;
 
     @Getter @Setter
-    private String current;
+    private String historyUrl;
 
     public String getCurrentWeatherUrl(String location) {
-        return String.format("%s%s?q=%s&appid=%s&units=metric", url, current, location, apikey);
+        return String.format("%s?q=%s&appid=%s&units=metric", currentUrl, location, apiKey);
+    }
+
+    public String getHistoricalWeatherUrl(String location) {
+        return historyUrl;
     }
 }

@@ -1,4 +1,4 @@
 openweather:
-  url: http://api.openweathermap.org/
-  apikey: 428e0f36f3fd7bd65b720b508a6235df
-  current: data/2.5/weather
+  apiKey: 428e0f36f3fd7bd65b720b508a6235df
+  currentUrl: http://api.openweathermap.org/data/2.5/weather
+  historyUrl: https://samples.openweathermap.org/data/2.5/history/city?q=Berlin,DE&appid=123123
